@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "../styles/navbar.module.css";
 import { FiChevronDown } from "react-icons/fi";
+import { FaUser } from "react-icons/fa";
+import { MdOutlineCardGiftcard } from "react-icons/md";
+import { BsFillCartFill } from "react-icons/bs";
 
 export const Navbar = () => {
   return (
@@ -22,7 +25,12 @@ export const Navbar = () => {
           <p>More <FiChevronDown /></p>
           <p>boAt FloAtverse</p>
         </div>
-        <div></div>
+        <div className={styles.searchBox}>
+            <input type="text" placeholder="Search..." />
+            <FaUser style={{fontSize:"20px"}}/>
+            <MdOutlineCardGiftcard style={{fontSize:"20px"}}/>
+            <BsFillCartFill style={{fontSize:"18px"}}/>
+        </div>
       </div>
     </nav>
   );

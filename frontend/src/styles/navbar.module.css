@@ -1,17 +1,20 @@
 nav {
   height: 100px;
   width: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .navChild1 {
   height: 33%;
   width: 100%;
-  background: red;
+  background: rgb(255, 0, 0);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   /* padding: 2px; */
+}
+.navChild1 p {
+  font-size: 15px;
 }
 .navChild2 {
   height: 67%;
@@ -22,7 +25,7 @@ nav {
   justify-content: space-between;
 }
 .navChild2 > div {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   height: 100%;
   display: flex;
   align-items: center;
@@ -40,6 +43,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-right: -17%;
 }
 .navChild2 > div:nth-child(2) p {
   cursor: pointer;
@@ -55,6 +59,20 @@ nav {
 .navChild2 > div:nth-child(2) p:hover::after {
   width: 100%;
 }
-.navChild2 > div:nth-child(3) {
-  width: 20%;
+nav .searchBox {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 2%;
+  /* justify-self: last baseline; */
+}
+nav input {
+  width: 60%;
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-family: Montserrat;
 }
