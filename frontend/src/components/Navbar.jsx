@@ -19,17 +19,26 @@ export const Navbar = () => {
           />
         </div>
         <div>
-          <p>Shop <FiChevronDown/> </p>
+          <div className={styles.navDropdown}>
+            <p>
+              Shop <FiChevronDown />{" "}
+            </p>
+            <div className={styles.navDropdownContent}>
+              
+            </div>
+          </div>
           <p>Daily Deals</p>
           <p>Offer Zone</p>
-          <p>More <FiChevronDown /></p>
+          <p>
+            More <FiChevronDown />
+          </p>
           <p>boAt FloAtverse</p>
         </div>
         <div className={styles.searchBox}>
-            <input type="text" placeholder="Search..." />
-            <FaUser style={{fontSize:"20px"}}/>
-            <MdOutlineCardGiftcard style={{fontSize:"20px"}}/>
-            <BsFillCartFill style={{fontSize:"18px"}}/>
+          <input type="text" placeholder="Search..." />
+          <FaUser style={{ fontSize: "20px" }} />
+          <MdOutlineCardGiftcard style={{ fontSize: "20px" }} />
+          <BsFillCartFill style={{ fontSize: "18px" }} />
         </div>
       </div>
     </nav>

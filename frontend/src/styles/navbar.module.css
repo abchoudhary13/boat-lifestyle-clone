@@ -76,3 +76,22 @@ nav input {
   outline: none;
   font-family: Montserrat;
 }
+
+/* the dropdown */
+.navDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.navDropdownContent {
+  display: none;
+  position: absolute;
+  background-color: black;
+  /* min-width: 160px; */
+  height: 400px;
+  width: 100%;
+  z-index: 1;
+}
+.navDropdown:hover .navDropdownContent {
+  display: block;
+}
