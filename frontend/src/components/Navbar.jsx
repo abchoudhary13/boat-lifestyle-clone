@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/navbar.module.css";
 import { FiChevronDown } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
 import { MdOutlineCardGiftcard } from "react-icons/md";
 import { BsFillCartFill } from "react-icons/bs";
+import { NavDropDown } from "./NavDropDown";
 
 export const Navbar = () => {
+  const [show, setShow] = useState(false);
   return (
     <nav>
       <div className={styles.navChild1}>
@@ -18,21 +20,25 @@ export const Navbar = () => {
             alt=""
           />
         </div>
-        <div>
-          <div className={styles.navDropdown}>
-            <p>
-              Shop <FiChevronDown />{" "}
-            </p>
-            <div className={styles.navDropdownContent}>
-              
-            </div>
+        <div className="navLinks">
+          <div className="navLinksDiv">
+            <p onClick={() => setShow(!show)}>Shop</p>
+            <FiChevronDown />
+            {show ? <NavDropDown /> : null}
           </div>
-          <p>Daily Deals</p>
-          <p>Offer Zone</p>
-          <p>
-            More <FiChevronDown />
-          </p>
-          <p>boAt FloAtverse</p>
+          <div className="navLinksDiv">
+            <p>Daily Deals</p>
+          </div>
+          <div className="navLinksDiv">
+            <p>Offer Zone</p>
+          </div>
+          <div className="navLinksDiv">
+            <p>More</p>
+            <FiChevronDown />
+          </div>
+          <div className="navLinksDiv">
+            <p>boAt FloAtverse</p>
+          </div>
         </div>
         <div className={styles.searchBox}>
           <input type="text" placeholder="Search..." />
