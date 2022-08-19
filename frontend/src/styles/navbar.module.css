@@ -1,0 +1,60 @@
+nav {
+  height: 100px;
+  width: 100%;
+  border: 1px solid black;
+}
+.navChild1 {
+  height: 33%;
+  width: 100%;
+  background: red;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 2px; */
+}
+.navChild2 {
+  height: 67%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navChild2 > div {
+  border: 1px solid white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.navChild2 > div:first-child {
+  width: 10%;
+}
+.navChild2 img {
+  width: 80px;
+}
+.navChild2 > div:nth-child(2) {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.navChild2 > div:nth-child(2) p {
+  cursor: pointer;
+}
+.navChild2 > div:nth-child(2) p::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: width 0.6s;
+}
+.navChild2 > div:nth-child(2) p:hover::after {
+  width: 100%;
+}
+.navChild2 > div:nth-child(3) {
+  width: 20%;
+}
